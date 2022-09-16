@@ -31,6 +31,8 @@ public class BookController2 {
     }
 
     @GetMapping("{currentPage}/{pageSize}")
+    //前端按条件查询，url为：http://localhost:81/books/currentPage/pageSize?name=xxx&type=xx&description
+    //使用pojo Book接收url连接参数
     public R getPage(@PathVariable int currentPage, @PathVariable int pageSize, Book book) {
         IPage<Book> page = bookService.getPage(currentPage, pageSize, book);
         // 如果当前页面值大于总页码值，那么重新执行查询操作，使用最大页码值作为当前页码值

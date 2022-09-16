@@ -18,6 +18,7 @@ import top.jacktgq.service.IBookService;
  */
 @Service
 public class BookServiceImpl2 extends ServiceImpl<BookMapper, Book> implements IBookService {
+    // 业务实现层直接extends ServiceImpl，则自动实现了IBookService从IService那继承的接口
     @Autowired
     private BookMapper bookMapper;
 

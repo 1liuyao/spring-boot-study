@@ -26,9 +26,13 @@ logging:
     # %m：消息
     # %n：换行
     # console: "%d %clr(%5p) --- [%16t] %clr(%-40.40c){cyan} : %m %n"
+
+  # 指定日志信息输出文件名称
   file:
     name: server.log
   logback:
     rollingpolicy:
+      # 当server.log文件大小超过4kb时，将日志信息打印到新文件中
       max-file-size: 4KB
+      # 定义新文件名称格式：server.2022-09-15.0.log server.2022-09-16.1.log
       file-name-pattern: server.%d{yyyy-MM-dd}.%i.log

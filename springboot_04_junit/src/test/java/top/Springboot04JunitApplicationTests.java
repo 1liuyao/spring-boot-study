@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import top.jacktgq.Springboot04JunitApplication;
 import top.jacktgq.dao.BookDao;
-// 如果测试类跟springboot运行引导类不在同一个包下，那么需要给@SpringBootTest注解加classes属性
+// 如果测试类跟springboot运行引导类【不在同一个包】下，那么需要给@SpringBootTest注解加classes属性
 @SpringBootTest(classes = Springboot04JunitApplication.class)
 class Springboot04JunitApplicationTests {
     // 1、注入要测试的对象

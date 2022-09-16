@@ -16,6 +16,7 @@
     </properties>
 
     <dependencies>
+        <!--Mybatis-plus资源坐标-->
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>

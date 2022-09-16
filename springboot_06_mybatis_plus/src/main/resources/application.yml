@@ -2,11 +2,12 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/springboot_db?serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/springboot?serverTimezone=UTC
     username: root
-    password: TGQ@candywall123
+    password: password
 
 # 设置MP相关的配置
+# 解决数据库表明和实体类名不同导致映射失败找不到表
 mybatis-plus:
   global-config:
     db-config:

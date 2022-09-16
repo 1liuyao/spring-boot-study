@@ -14,9 +14,9 @@ spring:
   # 热部署范围配置
   devtools:
     restart:
-      # 设置不参与热部署的文件和文件夹（即修改后不重启）
+      # 设置[不参与]热部署的文件和文件夹（即修改后不自动重启）
       exclude: static/**,public/**,config/application.yml
-      #是否可用
+      # 热部署是否可用，false为关闭热部署
       # enabled: false
 
 # 配置MP

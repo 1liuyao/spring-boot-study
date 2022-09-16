@@ -17,6 +17,10 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
+
+    <!--网络情况下自己编写pom文件，继承spring-boot-starter-parent，
+       并添加spring-boot-starter-web依赖，再之所引导类可完成spring boot工程构建-->
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>

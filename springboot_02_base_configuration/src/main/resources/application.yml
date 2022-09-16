@@ -1,2 +1,6 @@
+#yml 是配置文件的主流格式
+#当application.properties applicaion.yml application.yaml共存时
+#配置加载优先级：application.properties>applicaion.yml>application.yaml
+#当三个配置文件中的不同配置会全部保留下来，当配置相同属性时按照加载优先级覆盖
 server:
   port: 81

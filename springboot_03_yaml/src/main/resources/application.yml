@@ -3,12 +3,13 @@ province: Beijing
 city: Beijing
 area: Haidian
 
+# 字符串类型
 port: 8080
-
+# 布尔类型
 party: true
-
+# 日期类型
 birthday: 1949-10-01
-
+# POJO类型
 user:
   name: zhangsan
   age: 17
@@ -16,20 +17,20 @@ user:
 user2:
   name: lisi
   age: 18
-
+#多层级key
 a:
   b:
     c:
       d:
         e: 123
-
+# list类型格式一
 habits:
   - game
   - music
   - sleep
-
+# list类型格式二
 habits2: [game, music, sleep]
-
+# JSON对象数组格式一
 users:
   - name: zhangsan
     age: 40
@@ -37,7 +38,7 @@ users:
     age: 38
   - name: wangwu
     age: 15
-
+# JSON对象数组格式二
 users2:
   -
     name: zhangsan
@@ -48,9 +49,9 @@ users2:
   -
     name: wangwu
     age: 15
-
+#JSON对象数组格式三
 users3: [{name: zhangsan, age: 40}, {name: lisi, age: 38}, {name: wangwu, age: 15}]
-
+#层级结构展示，输入server.port IDEA会自动识别
 server:
   port: 80
   servlet:
@@ -59,15 +60,17 @@ server:
 
 baseDir: C:\windows
 
-# ??${???}????
+# 一级目录
+# 使用${属性名}引用数据
 tempDir: ${baseDir}\temp
 
-# ????????????????????
+# 二级目录
+# 使用引号包裹的字符串，其中的转义字符\t可以生效
 tempDir1: "${baseDir}\temp"
 
-# ?????????????
-# ?spring?????????????????spring??????
-# ??????spring?????
+# 创建类，用于封装下面的数据
+# 由Spring帮我们去加载数据到对象中，一定要告诉spring加载这组信息，就是让spring管理这个类的对象
+# 使用时候从spring中直接获取信息使用
 datasource:
   driver: com.mysql.jdbc.Driver
   url: jdbc:mysql://localhost:3306/springboot_db

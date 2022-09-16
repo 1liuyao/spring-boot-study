@@ -32,6 +32,6 @@ testcase:
     id: ${random.int}
     id2: ${random.int(10)} # 生成10以内的整数
     type: ${random.int(5, 10)} # 生成5-10之间的整数
-    name: 糖果墙${random.value}
+    name: 黑马${random.value} # 开头固定为黑马，后面自动生成
     uuid: ${random.uuid}
     publicTime: ${random.long}

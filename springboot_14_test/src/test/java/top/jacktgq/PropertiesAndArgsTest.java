@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import top.jacktgq.pojo.BookCase;
 
-// properties属性可以为当前测试用例添加临时的属性配置
+// properties属性可以为【当前】测试用例添加【临时】的属性配置，只在当前文件有效
 //@SpringBootTest(properties = {"test.prop=testValue1"})
 // args属性可以为当前测试用例添加临时的命令行参数
 //@SpringBootTest(args = {"--test.prop=testValue2"})

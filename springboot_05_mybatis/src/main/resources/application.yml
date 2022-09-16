@@ -2,6 +2,7 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/springboot_db?serverTimezone=UTC
+    #不加时区报错：Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: The server time zone value '�й���׼ʱ��' is unrecognized
+    url: jdbc:mysql://localhost:3306/springboot?serverTimezone=UTC
     username: root
-    password: TGQ@candywall123
+    password: password

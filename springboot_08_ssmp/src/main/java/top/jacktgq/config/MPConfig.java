@@ -13,6 +13,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class MPConfig {
     @Bean
+    //spring整合第三方MP的bean
     public MybatisPlusInterceptor mybatisPlusInterceptor() {
         // 1、定义MP拦截器
         MybatisPlusInterceptor interceptor = new MybatisPlusInterceptor();

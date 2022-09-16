@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import top.jacktgq.pojo.Book;
 
+import java.util.function.Function;
+
 /**
  * @Author CandyWall
  * @Date 2022/1/20--0:34
@@ -46,17 +48,24 @@ public class BookMapperTestCase {
 
     @Test
     void testGetPage() {
+        //分页select * from table limit m,n;
+        //分页相当于在原有功能的基础上做增强，需要拦截器实现
         IPage<Book> page = new Page(2, 5);
+        // Preparing: SELECT id,name,type,description FROM tbl_book LIMIT ?,?
+        //==> Parameters: 5(Long), 5(Long)，第一个参数传的是第二页的起始记录索引值
+
         bookMapper.selectPage(page, null);
-        System.out.println("currentPage:" + page.getCurrent());
-        System.out.println("pageSize:" + page.getSize());
-        System.out.println("total:" + page.getTotal());
-        System.out.println("page:" + page.getPages());
-        System.out.println("record:" + page.getRecords());
+        System.out.println("currentPage:" + page.getCurrent());//currentPage:2 当前页
+        System.out.println("pageSize:" + page.getSize());//pageSize:5 页容量
+        System.out.println("total:" + page.getTotal());//total:14 表行数
+        System.out.println("page:" + page.getPages());//page:3 一共几页
+        System.out.println("record:" + page.getRecords());//将符合条件的记录封装成list
     }
 
     @Test
     void testGetByCondition() {
+        //条件查询，先申明条件查询器
+        //等价于select * from tbl_book where name likes "%spring%"
         QueryWrapper<Book> qw = new QueryWrapper();
         qw.like("name", "spring");
         bookMapper.selectList(qw);
@@ -64,6 +73,7 @@ public class BookMapperTestCase {
 
     @Test
     void testGetByCondition2() {
+        //lamda条件查询器，解决手动输入列名写错的情况
         String name = null;
         LambdaQueryWrapper<Book> lqw = new LambdaQueryWrapper<>();
         /*if (name != null) {

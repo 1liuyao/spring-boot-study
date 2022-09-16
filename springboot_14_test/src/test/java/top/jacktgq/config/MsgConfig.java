@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Configuration;
  * @Description
  */
 @Configuration
+// 仅在单元测试时使用这个bean，所以该测试类不应该定义在src下，应该定义在test下
 public class MsgConfig {
     @Bean
     public String msg() {

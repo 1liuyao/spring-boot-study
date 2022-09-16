@@ -12,6 +12,7 @@ import top.jacktgq.config.MsgConfig;
  * @Description
  */
 @SpringBootTest
+//导入配置，现在yml和test环境的配置均生效
 @Import(MsgConfig.class)
 public class ConfigurationTest {
     @Autowired

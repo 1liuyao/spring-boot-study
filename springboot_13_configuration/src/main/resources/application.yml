@@ -1,8 +1,10 @@
 serverConfig:
-  # ipAddress: 192.168.0.1 # ????
+  # ipAddress: 192.168.0.1 # 松散绑定就是指通过配置类ServerConfig读取配置属性时，
+                          # 配置类属性名称与配置文件中key名可以不完全相同
+                          # 当配置以下格式key名，仍然可以和ServerConfig中属性名绑定上
   # ipaddress: 192.168.0.1
   # IPADDRESS: 192.168.0.1
-  ip-address: 192.168.0.1 # ????????????
+  ip-address: 192.168.0.1 # 官方主流，烤肉串模式 0-0-0-0
   # ip_address: 192.168.0.1 # ?????
   # ip-address: 192.168.0.1 # ?????
   # IP_ADDRESS: 192.168.0.1 # ????
@@ -14,7 +16,7 @@ serverConfig:
 
 datasource:
   driverClassName: com.mysql.cj.jdbc.Driver123
-  # ???????????????8???????????87
-  # ?????????????????
-  # password: 0127
+  # 如果不加双引号会认为是8进制，【8进制以0开头，其余位取值范围0~7】
+  #【16进制以0x开头，其余位取值范围0~9，a~f】
+  # password: 0127  等于十进制的 87
   password: "0127"

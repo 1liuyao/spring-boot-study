@@ -37,7 +37,8 @@ public class BookController {
     @Value("${tempDir1}")
     private String tempDir1;
 
-    // 使用自动装配将所有的数据封装到Environment对象中
+    // 使用自动装配将配置文件中所有的数据封装到Environment对象中
+    // 后续调用Environment对象中的getProperty(key)，获得对应的value值
     @Autowired
     private Environment env;
 

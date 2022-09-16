@@ -6,7 +6,7 @@ import lombok.NoArgsConstructor;
 /**
  * @Author CandyWall
  * @Date 2022/1/20--13:50
- * @Description 发给前端的统一数据格式
+ * @Description 发给前端的统一数据格式，规范化后端响应格式
  */
 @Data
 @NoArgsConstructor

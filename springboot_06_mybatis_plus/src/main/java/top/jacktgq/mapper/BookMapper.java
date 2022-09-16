@@ -11,6 +11,7 @@ import top.jacktgq.pojo.Book;
  * @Description
  */
 @Mapper
+//继承BaseMapper后，就具备了增删改查的功能
 public interface BookMapper extends BaseMapper<Book> {
 
 }

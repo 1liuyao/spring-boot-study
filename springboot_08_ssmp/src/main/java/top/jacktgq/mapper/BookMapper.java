@@ -11,5 +11,6 @@ import top.jacktgq.pojo.Book;
  */
 @Mapper
 public interface BookMapper extends BaseMapper<Book> {
+    //使用MP封装好的数据库操作，直接继承BaseMapper
 
 }
